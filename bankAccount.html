@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Account Statement</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="center" style="width: 800px; height: 500px">
+        <h1>Account Statement</h1>
+        <div class="statement">
+          <table class="bordered-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Withdrawals</th>
+                <th>Deposits</th>
+                <th>Balance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table-content">2023-10-01</td>
+                <td class="table-content">-</td>
+                <td class="table-content">-</td>
+                <td class="table-content">$1,000.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="buttons">
+          <button style="background-color: red" onclick="openModal('withdraw')">
+            Withdraw
+          </button>
+          <button
+            style="background-color: green"
+            onclick="openModal('deposit')"
+          >
+            Deposit
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="myModal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle">Deposit Amount</h2>
+        <input type="text" id="amountInput" placeholder="Enter amount" />
+        <button id="confirmButton">Confirm</button>
+      </div>
+    </div>
+    <script src="action.js"></script>
+  </body>
+</html>
